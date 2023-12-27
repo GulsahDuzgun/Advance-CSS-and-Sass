@@ -5,6 +5,12 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 
+
+  SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+  FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 
 * {
@@ -45,3 +51,30 @@ body {
 .logo {
   height: 35px;
 }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 62px;
+  font-weight: 400;
+  letter-spacing: 24px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 24px;
+  letter-spacing: 12px;
+  font-weight: 700;
+}
+
+/*
+  SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+  FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
