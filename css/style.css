@@ -53,21 +53,22 @@ body {
   text-align: center;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
+  cursor: pointer;
 }
 
 /* .logo-box:hover {
   animation: moveInRight 1s ease-in;
 } */
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -81,7 +82,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6.2rem;
   font-weight: 400;
@@ -95,7 +96,7 @@ body {
   animation-iteration-count: 4; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2.4rem;
   letter-spacing: 1.2rem;
