@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: $color-gray;
+  color: $color-dark-grey;
   padding: 3rem;
 }
 
@@ -35,3 +35,24 @@ body {
     animation: moveInRight 1s ease-in-out;
   }
 }
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/*
+  SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+  FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
