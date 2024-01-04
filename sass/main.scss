@@ -1,4 +1,4 @@
-@import "abstract/functions";
+@import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
@@ -8,7 +8,11 @@
 @import "base/utilities";
 
 @import "components/button";
-@import "page/_home.scss";
+
+@import "layout/_header";
+@import "layout/grid";
+
+@import "pages/_home.scss";
 
 /*
   SPACING SYSTEM (px)
