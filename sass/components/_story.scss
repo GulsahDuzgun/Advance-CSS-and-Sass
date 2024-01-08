@@ -1,0 +1,26 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 4rem 8rem rgba($color-black, $alpha: 0.1);
+  border-radius: 3px;
+  background-color: $color-white;
+  font-size: $default-font-size;
+  padding: 3.2rem 2.4rem 3.2rem 4.8rem;
+  height: 100vh;
+
+  &__shape {
+    float: left;
+    height: 16rem;
+    width: 16rem;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2.4rem);
+  }
+
+  &__img {
+    height: 100%;
+  }
+}

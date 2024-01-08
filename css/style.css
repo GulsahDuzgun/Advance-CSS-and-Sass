@@ -350,6 +350,27 @@ body {
   .feature-box:hover {
     transform: translateY(-1.6rem) scale(1.1); }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 4rem 8rem rgba(51, 51, 51, 0.1);
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 1.6rem;
+  padding: 3.2rem 2.4rem 3.2rem 4.8rem;
+  height: 100vh; }
+  .story__shape {
+    float: left;
+    height: 16rem;
+    width: 16rem;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2.4rem); }
+  .story__img {
+    height: 100%; }
+
 .header {
   height: 95vh;
   position: relative;
@@ -418,6 +439,10 @@ body {
   margin-top: -12rem;
   padding: 32rem 0 24rem;
   background-color: #f7f7f7; }
+
+.section-stories {
+  height: 100vh;
+  padding: 16rem 0rem; }
 
 /*
   SPACING SYSTEM (px)
