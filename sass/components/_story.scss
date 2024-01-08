@@ -5,7 +5,7 @@
   border-radius: 3px;
   background-color: $color-white;
   font-size: $default-font-size;
-  padding: 4.8rem 1.6rem 4.8rem 4.8rem;
+  padding: 4.8rem 3.2rem 4.8rem 6.4rem;
   transform: skewX(-12deg);
 
   // & > * {
@@ -14,6 +14,7 @@
 
   &__shape {
     float: left;
+    position: relative;
     height: 16rem;
     width: 16rem;
     shape-outside: circle(50% at 50% 50%);
@@ -26,9 +27,35 @@
 
   &__img {
     height: 100%;
+    transform: translateX(-3rem) scale(1.1);
+    transition: all 0.3s;
+  }
+
+  &__caption {
+    font-size: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    opacity: 0;
   }
 
   &__text {
     transform: skewX(12deg);
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    filter: blur(7px) brightness(80%);
+    transform: translateX(-3rem) scale(1);
   }
 }
