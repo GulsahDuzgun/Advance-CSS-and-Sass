@@ -55,4 +55,9 @@
   height: 50rem;
   border-radius: 3px;
   box-shadow: 0 2rem 4rem rgba($color: $color-black, $alpha: 0.5);
+
+  &-form {
+    padding: 0.8rem 1.6rem;
+    width: 60%;
+  }
 }

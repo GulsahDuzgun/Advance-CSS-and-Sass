@@ -492,6 +492,9 @@ body {
   height: 50rem;
   border-radius: 3px;
   box-shadow: 0 2rem 4rem rgba(51, 51, 51, 0.5); }
+  .book-form {
+    padding: 0.8rem 1.6rem;
+    width: 60%; }
 
 /*
   SPACING SYSTEM (px)
