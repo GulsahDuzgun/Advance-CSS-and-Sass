@@ -1,7 +1,4 @@
 .form {
-  &__label {
-  }
-
   &__input {
     display: block;
     border: none;
@@ -23,6 +20,27 @@
     &::-webkit-input-placeholder {
       color: $color-dark-grey-2;
     }
+
+    &:hover:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+  }
+
+  &__label {
+    display: block;
+    color: $color-black;
+    margin-left: 2.4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    transition: all 0.3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    // background-color: $myfav;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
   }
 
   &__group {
