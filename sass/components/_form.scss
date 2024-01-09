@@ -9,6 +9,7 @@
     padding: 1.6rem 2.4rem;
     font-size: 1.6rem;
     font-family: inherit;
+    color: inherit;
     border-radius: 3px;
     background-color: rgba($color: $color-white, $alpha: 0.5);
     border-bottom: 3px solid transparent;
@@ -17,6 +18,10 @@
       outline: none;
       border-bottom: 3px solid $color-primary;
       box-shadow: 0 1.5rem 3rem rgba($color: $color-black, $alpha: 0.1);
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-dark-grey-2;
     }
   }
 
