@@ -475,10 +475,8 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
-  visibility: hidden; }
-  .popup:target {
-    opacity: 1;
-    visibility: visible; }
+  visibility: hidden;
+  transition: all 0.3s; }
   .popup__container {
     position: absolute;
     top: 50%;
@@ -489,7 +487,16 @@ body {
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
-    overflow: hidden; }
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__container {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
   .popup__left {
     width: 33.33333%;
     display: table-cell; }
