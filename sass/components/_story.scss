@@ -11,7 +11,6 @@
   // & > * {
   //   transform: skewX(12deg);
   // }
-
   &__shape {
     float: left;
     position: relative;
@@ -57,5 +56,16 @@
   &:hover &__img {
     filter: blur(7px) brightness(80%);
     transform: translateX(-3rem) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+@include resForPhones {
+  html {
+    font-size: 1.4rem;
   }
 }
