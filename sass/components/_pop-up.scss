@@ -5,6 +5,13 @@
   height: 100vh;
   width: 100%;
   background-color: rgba($color: $color-black, $alpha: 0.8);
+  opacity: 0;
+  visibility: hidden;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__container {
     @include center-item;
@@ -31,6 +38,25 @@
     width: 66.66667%;
     vertical-align: middle;
     padding: 3.2rem 4.8rem;
+    position: relative;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      display: inline-block;
+      position: absolute;
+      font-size: 4rem;
+      color: $color-dark-grey-2;
+      top: 4.8rem;
+      right: 6.4rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   &__text {
@@ -38,7 +64,7 @@
     line-height: 1.8;
     margin-bottom: 4.8rem;
     column-count: 2;
-    column-gap: 3.2rem;
+    column-gap: 4.8rem;
     column-rule: 2px solid $color-dark-grey-2;
 
     -moz-column-count: 2;
