@@ -58,14 +58,3 @@
     transform: translateX(-3rem) scale(1);
   }
 }
-
-@media (max-width: 600px) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-@include resForPhones {
-  html {
-    font-size: 1.4rem;
-  }
-}
