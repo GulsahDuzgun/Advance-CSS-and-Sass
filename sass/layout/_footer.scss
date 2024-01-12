@@ -4,9 +4,21 @@
   color: $color-light-grey-3;
   font-size: 1.25rem;
 
+  @include setResponsive(tab-port) {
+    padding: 6.4rem 0;
+  }
+
+  @include setResponsive(phone) {
+    padding: 4.8rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 4.8rem;
+
+    @include setResponsive(tab-port) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__logo {
@@ -20,7 +32,7 @@
     padding-top: 1.6rem;
 
     @include setResponsive(tab-port) {
-      width: 100%;
+      width: 50rem;
       margin-bottom: 3.2rem;
       text-align: center;
     }
@@ -63,7 +75,7 @@
     word-spacing: 0.3rem;
 
     @include setResponsive(tab-port) {
-      width: 100%;
+      width: 50rem;
       text-align: center;
     }
   }
