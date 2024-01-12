@@ -40,4 +40,9 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include setResponsive(tab-port) {
+    padding: 0;
+  }
 }

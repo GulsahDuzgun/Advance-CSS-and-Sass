@@ -9,6 +9,11 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
+
+    @include setResponsive(tab-port) {
+      font-size: 2rem;
+      padding: 1.2rem 4.8rem;
+    }
   }
 
   &:hover {

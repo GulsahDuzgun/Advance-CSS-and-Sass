@@ -5,8 +5,8 @@
 
   &__button {
     position: fixed;
-    top: 4rem;
-    right: 4rem;
+    top: 6rem;
+    right: 6rem;
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
@@ -14,14 +14,28 @@
     background-color: white;
     box-shadow: 0 3rem 5rem rgba($color: $color-black, $alpha: 0.3);
     cursor: pointer;
+
+    @include setResponsive(tab-port) {
+      width: 7rem;
+      height: 7rem;
+      top: 2.4rem;
+      right: 2.4rem;
+    }
+
+    @include setResponsive(phone) {
+      width: 6rem;
+      height: 6rem;
+      top: 3.2rem;
+      right: 3.2rem;
+    }
   }
 
   &__background {
     position: fixed;
     width: 6rem;
     height: 6rem;
-    top: 4.5rem;
-    right: 4.5rem;
+    top: 6rem;
+    right: 6rem;
     border-radius: 50%;
     background-image: radial-gradient(
       $color-primary-light,
@@ -29,6 +43,20 @@
     );
     z-index: 999;
     transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+
+    @include setResponsive(tab-port) {
+      top: 3rem;
+      right: 3rem;
+      width: 6rem;
+      height: 6rem;
+    }
+
+    @include setResponsive(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+      width: 5rem;
+      height: 5rem;
+    }
   }
 
   &__nav {
@@ -117,6 +145,10 @@
       width: 3rem;
       height: 2px;
       background-color: $color-dark-grey-3;
+
+      @include setResponsive(phone) {
+        width: 2.4rem;
+      }
     }
 
     &::after,
@@ -129,10 +161,16 @@
     &::after {
       top: 0.8rem;
       // transform-origin: left;
+      @include setResponsive(phone) {
+        top: 0.7rem;
+      }
     }
 
     &::before {
       top: -0.8rem;
+      @include setResponsive(phone) {
+        top: -0.7rem;
+      }
     }
   }
   &__button:hover &__icon-container &__icon::after {

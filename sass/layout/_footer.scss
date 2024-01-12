@@ -18,6 +18,12 @@
     display: inline-block;
     border-top: 3px solid;
     padding-top: 1.6rem;
+
+    @include setResponsive(tab-port) {
+      width: 100%;
+      margin-bottom: 3.2rem;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -55,5 +61,10 @@
     width: 80%;
     float: right;
     word-spacing: 0.3rem;
+
+    @include setResponsive(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 }

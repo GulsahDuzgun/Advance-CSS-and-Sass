@@ -1,9 +1,16 @@
 .row {
   max-width: $grid-width;
   margin: 0 auto;
+  @include setResponsive(tab-port) {
+    max-width: 60rem;
+    padding: 0 2.4rem;
+  }
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include setResponsive(tab-port) {
+      margin-bottom: 4.8rem;
+    }
   }
 
   @include clear-fix; //row::after {}
@@ -13,6 +20,19 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizantal;
+      @include setResponsive(tab-port) {
+        margin-right: 0;
+        padding: 3.2rem 4.8rem;
+      }
+
+      @include setResponsive(phone) {
+        margin-right: 0;
+        padding: 2.4rem 3.2rem;
+      }
+    }
+
+    @include setResponsive(tab-port) {
+      width: 100% !important;
     }
   }
 
