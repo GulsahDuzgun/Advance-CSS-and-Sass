@@ -12,7 +12,6 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 3px;
     box-shadow: 0 1.6rem 3rem $shadow-subtle;
     border-radius: 10px;
     overflow: hidden;
@@ -176,5 +175,188 @@
   &__price-value {
     font-size: 4.8rem;
     font-weight: 100;
+  }
+
+  // for portrait tablet device size
+
+  @include setResponsive(tab-port) {
+    height: auto;
+
+    &__side {
+      height: auto;
+      transition: all 1.5s ease;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      box-shadow: 0 1.6rem 3rem $shadow-subtle;
+      overflow: hidden;
+      border-radius: 0;
+
+      &--front {
+        background-color: $color-white;
+        border-top-right-radius: 11px;
+        border-top-left-radius: 11px;
+      }
+
+      &--back {
+        transform: rotateY(0deg);
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 11px;
+
+        &-1 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark
+          );
+        }
+
+        &-2 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-primary-light,
+            $color-primary-dark
+          );
+        }
+
+        &-3 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          );
+        }
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    &__picture {
+      height: 23rem;
+      background-size: cover;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+
+      &--1 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark
+          ),
+          url("../img/nat-5.jpg");
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-primary-light,
+            $color-primary-dark
+          ),
+          url("../img/nat-6.jpg");
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          ),
+          url("../img/nat-7.jpg");
+      }
+    }
+
+    &__heading {
+      position: absolute;
+      top: 12rem;
+      right: 2rem;
+      width: 75%;
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      color: $color-white;
+    }
+
+    &__heading-span {
+      padding: 1.2rem 2.4rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.85),
+          rgba($color-secondary-dark, 0.85)
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.85),
+          rgba($color-primary-dark, 0.85)
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary-dark, 0.85)
+        );
+      }
+    }
+
+    &__details {
+      ul {
+        list-style: none;
+        text-align: center;
+        padding: 1.6rem 3.2rem;
+
+        li {
+          padding: 1.2rem;
+          &:not(:last-child) {
+            border-bottom: 1px solid $color-light-grey-2;
+          }
+        }
+      }
+    }
+
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      width: 100%;
+      text-align: center;
+    }
+
+    &__price-box {
+      color: $color-white;
+      margin-bottom: 6.2rem;
+    }
+
+    &__price-only {
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    &__price-value {
+      font-size: 4.8rem;
+      font-weight: 100;
+    }
   }
 }
