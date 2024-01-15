@@ -85,4 +85,76 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
   }
+
+  @include setResponsive(forPopup) {
+    &__container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__left {
+      width: 100%;
+      display: flex;
+    }
+
+    &__right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__right &__btn {
+      max-width: 30%;
+      display: inline-block;
+      padding: 1rem 1.6rem;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    &__img {
+      display: inline-block;
+      width: 50%;
+    }
+
+    &__close:visited,
+    &__close:link {
+      top: 2rem;
+    }
+  }
+
+  @include setResponsive(phone) {
+    &__text {
+      font-size: 1.6rem;
+      column-count: 1;
+      line-height: 1.1;
+      margin-bottom: 3.2rem;
+    }
+
+    &__heading--secondary {
+      font-size: 2.4rem;
+      letter-spacing: -0.5px;
+    }
+
+    &__heading--tertiary {
+      font-size: 2rem;
+      letter-spacing: -0.8px;
+    }
+
+    &__right &__btn {
+      max-width: 60%;
+      display: inline-block;
+      padding: 1rem 1.6rem;
+      text-align: center;
+      word-wrap: normal;
+    }
+
+    &__left {
+      display: block;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+    }
+  }
 }

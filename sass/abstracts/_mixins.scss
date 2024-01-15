@@ -46,4 +46,10 @@
       @content;
     }
   }
+
+  @if $breakpoint == forPopup {
+    @media (max-width: 100em) {
+      @content;
+    }
+  }
 }
