@@ -1,4 +1,10 @@
 .form {
+  &__element {
+    @include setResponsive(phone) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
   &__input {
     display: block;
     border: none;
@@ -38,7 +44,6 @@
   }
 
   &__input:placeholder-shown + &__label {
-    // background-color: $myfav;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
@@ -46,12 +51,21 @@
 
   &__group {
     padding: 0 2.4rem;
+    width: inherit;
+
+    :nth-child(3) {
+      margin: 0 0 1.6rem;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 0.8rem;
+      margin-bottom: 1.6rem;
     }
 
     &:last-child {
       margin: 3.6rem 0rem;
+      // @include setResponsive(phone) {
+      //   text-align: center;
+      // }
     }
   }
 
@@ -61,6 +75,12 @@
 
     &:not(:last-child) {
       padding-left: 1.6rem;
+    }
+
+    @include setResponsive(tab-land) {
+      &:not(:last-child) {
+        margin-right: 2.4rem;
+      }
     }
   }
 
