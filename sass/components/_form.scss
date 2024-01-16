@@ -58,14 +58,26 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 1.6rem;
+      margin-bottom: 2rem;
     }
 
     &:last-child {
       margin: 3.6rem 0rem;
-      // @include setResponsive(phone) {
-      //   text-align: center;
-      // }
+      @include setResponsive(phone) {
+        text-align: center;
+      }
+    }
+    @include setResponsive(phone) {
+      width: 90%;
+      margin: 0 2rem 0 3.6rem;
+
+      &:nth-child(3) {
+        margin: 0 0 0 3.6rem;
+      }
+
+      &:nth-child(4) {
+        margin-left: 1.2rem;
+      }
     }
   }
 

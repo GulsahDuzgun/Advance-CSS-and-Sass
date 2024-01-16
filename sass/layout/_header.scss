@@ -29,7 +29,7 @@
       url("../img/hero.jpg");
   }
 
-  @include setResponsive(tab-port) {
+  @include setResponsive(tab-land) {
     height: 85vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);

@@ -3,6 +3,15 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
+  @include setResponsive(tab-port) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include setResponsive(phone) {
+    width: 100%;
+    margin: 0;
+  }
 
   &__side {
     height: 52rem;
@@ -274,11 +283,21 @@
 
   @include setResponsive(tab-port) {
     &__heading {
-      width: 55%;
+      width: 50%;
     }
 
     &__heading-span {
-      padding: 1.2rem 1.8rem;
+      padding: 1.2rem 2rem;
+    }
+  }
+
+  @include setResponsive(phone) {
+    &__heading {
+      width: 70%;
+    }
+
+    &__heading-span {
+      padding: 1.2rem 2.4rem;
     }
   }
 }
