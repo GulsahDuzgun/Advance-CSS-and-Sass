@@ -126,7 +126,7 @@
     position: absolute;
     top: 12rem;
     right: 2rem;
-    width: 75%;
+    width: 70%;
     font-size: 3rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -135,7 +135,7 @@
   }
 
   &__heading-span {
-    padding: 1.2rem 2.4rem;
+    padding: 1.2rem 1.6rem;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 
@@ -207,7 +207,8 @@
 
   // for portrait tablet device size
 
-  @include setResponsive(tab-port) {
+  // @include setResponsive(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     overflow: hidden;
     border-radius: 11px;
@@ -238,7 +239,7 @@
     }
 
     &__heading {
-      width: 45%;
+      width: 65%;
     }
 
     &__details {
@@ -268,6 +269,16 @@
     &__price-value {
       font-size: 4.8rem;
       font-weight: 200;
+    }
+  }
+
+  @include setResponsive(tab-port) {
+    &__heading {
+      width: 55%;
+    }
+
+    &__heading-span {
+      padding: 1.2rem 1.8rem;
     }
   }
 }

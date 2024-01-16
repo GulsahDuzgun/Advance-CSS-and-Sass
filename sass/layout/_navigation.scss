@@ -23,8 +23,8 @@
     }
 
     @include setResponsive(phone) {
-      width: 6rem;
-      height: 6rem;
+      width: 6.5rem;
+      height: 6.5rem;
       top: 3.2rem;
       right: 3.2rem;
     }
@@ -76,6 +76,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   &__item {
@@ -143,7 +145,7 @@
       display: inline-block;
       position: absolute;
       width: 3rem;
-      height: 2px;
+      height: 1px;
       background-color: $color-dark-grey-3;
 
       @include setResponsive(phone) {
@@ -163,12 +165,19 @@
       // transform-origin: left;
       @include setResponsive(phone) {
         top: 0.7rem;
+        height: 1px;
+        transition: all 0.15s;
       }
     }
 
     &::before {
       top: -0.8rem;
-      @include setResponsive(phone) {
+      transition: all 0.15s;
+    }
+
+    @include setResponsive(phone) {
+      &::before {
+        height: 1px;
         top: -0.7rem;
       }
     }
