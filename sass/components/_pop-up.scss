@@ -9,10 +9,11 @@
   visibility: hidden;
   transition: all 0.3s;
 
-  @supports (backdrop-filter: blur(3px)) or (-webkit-backdrop-filter: blur(3px)) {
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+  @supports (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px)) {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     background-color: rgba($color: $color-black, $alpha: 0.3);
+    filter: brightness(80%);
   }
 
   &__container {

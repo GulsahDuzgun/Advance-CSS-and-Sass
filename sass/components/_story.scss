@@ -21,17 +21,25 @@
   // & > * {
   //   transform: skewX(12deg);
   // }
+
   &__shape {
     float: left;
     position: relative;
     height: 16rem;
     width: 16rem;
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
+    overflow: hidden;
+    border-radius: 50%;
 
-    clip-path: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-2.4rem) skewX(12deg);
+
+    @supports (clip-path: circle(50%)) or (-webkit-clip-path: polgon(0, 0)) {
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include setResponsive(tab-port) {
       shape-outside: circle(50% at 50% 60%);

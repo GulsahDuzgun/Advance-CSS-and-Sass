@@ -116,11 +116,14 @@ body {
   font-size: 3.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  color: transparent;
-  -webkit-background-clip: text;
+  color: #55c57a;
   transition: all 0.2s;
   letter-spacing: 0.2rem; }
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .heading-secondary {
+      background-image: linear-gradient(to right, #7ed56f, #28b485);
+      color: transparent;
+      -webkit-background-clip: text; } }
   @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 2.8rem;
@@ -626,11 +629,12 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s; }
-  @supports (backdrop-filter: blur(3px)) or (-webkit-backdrop-filter: blur(3px)) {
+  @supports (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px)) {
     .popup {
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-      background-color: rgba(0, 0, 0, 0.3); } }
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.3);
+      filter: brightness(80%); } }
   .popup__container {
     position: absolute;
     top: 50%;
@@ -756,11 +760,16 @@ body {
     position: relative;
     height: 16rem;
     width: 16rem;
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+    border-radius: 50%;
     transform: translateX(-2.4rem) skewX(12deg); }
+    @supports (clip-path: circle(50%)) or (-webkit-clip-path: polgon(0, 0)) {
+      .story__shape {
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        border-radius: none; } }
     @media (max-width: 56.25em) {
       .story__shape {
         shape-outside: circle(50% at 50% 60%);
@@ -860,14 +869,17 @@ body {
         display: inline-block; } }
 
 .header {
-  height: 95vh;
+  height: 85vh;
   position: relative;
   background-size: cover;
   background-position: top;
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   text-align: center; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      height: 95vh;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
   @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg"); } }
