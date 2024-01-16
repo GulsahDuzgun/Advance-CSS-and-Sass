@@ -17,11 +17,21 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url("/img/nat-4.jpg");
+    url("/img/nat-4.webp");
+
   background-position: center;
   background-size: cover;
   // clip-path: polygon(0 20%, 80% 0, 100% 0, 100% 80%, 20% 100%, 0 100%);
   transform: skewY(-7deg);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url("/img/nat-4.jpg");
+  }
 
   & > * {
     transform: skewY(7deg);
@@ -91,7 +101,7 @@
         rgba($color-white, 0.9) 0%,
         rgba($color-white, 0.9) 100%
       ),
-      url("/img/nat-10.jpg");
+      url("/img/nat-sm-10.jpg");
   }
 
   &-form {
